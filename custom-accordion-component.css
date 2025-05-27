@@ -1,13 +1,14 @@
-:host {
+body {
     display: block;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     font-family: sans-serif;
+    padding: 16px;
   }
   
-  .accordion-header {
-    background: #f0f0f0;
+  .accordion-label {
+    border-top: 1px solid #DDDDDD;
     padding: 1em;
     cursor: pointer;
     user-select: none;
@@ -21,7 +22,7 @@
     background: white;
   
     &.open {
-      max-height: 200px;
+      max-height: auto;
       padding: 1em;
     }
   }

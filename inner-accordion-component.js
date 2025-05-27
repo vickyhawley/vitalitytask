@@ -1,4 +1,4 @@
-class AccordionComponent extends HTMLElement {
+class InnerAccordionComponent extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: 'open' });
@@ -8,15 +8,15 @@ class AccordionComponent extends HTMLElement {
       
       this.shadowRoot.innerHTML = `
         <link rel='stylesheet' href='./custom-accordion-component.css' />
-        <div class="accordion-header">
-          <slot name="header">Accordion Title</slot>
+        <div class="accordion-label">
+          <slot name="label">Accordion Title</slot>
         </div>
         <div class="accordion-content">
           <slot name="content">Accordion content goes here...</slot>
         </div>
       `;
   
-      this.shadowRoot.querySelector('.accordion-header')
+      this.shadowRoot.querySelector('.accordion-label')
         .addEventListener('click', () => this.toggle());
     }
   
@@ -32,6 +32,6 @@ class AccordionComponent extends HTMLElement {
     }
   }
   
-  customElements.define('custom-accordion-component', AccordionComponent);
+  customElements.define('inner-accordion-component', InnerAccordionComponent);
   
   
