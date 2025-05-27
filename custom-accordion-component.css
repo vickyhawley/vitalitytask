@@ -1,0 +1,28 @@
+:host {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  .accordion-header {
+    background: #f0f0f0;
+    padding: 1em;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 1em;
+    background: white;
+  
+    &.open {
+      max-height: 200px;
+      padding: 1em;
+    }
+  }
+  
