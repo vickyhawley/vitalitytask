@@ -1,11 +1,11 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #cdcdcd;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #eaeff4;;
     --foreground: #ededed;
   }
 }
@@ -39,4 +39,26 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@font-face {
+  font-family: 'Hindi-light';
+  src: local('hindi-light'), url(../fonts/HindVadodara-Light.ttf)
+}
+@font-face {
+  font-family: 'Hindi-regular';
+  src: local('hindi-regular'), url(../fonts/HindVadodara-Regular.ttf)
+}
+@font-face {
+  font-family: 'Hindi-medium';
+  src: local('hindi-medium'), url(../fonts/HindVadodara-Medium.ttf)
+}
+@font-face {
+  font-family: 'Hindi-semibold';
+  src: local('hindi-semibold'), url(../fonts/HindVadodara-SemiBold.ttf)
+}
+
+@font-face {
+  font-family: 'Hindi-bold';
+  src: local('hindi-bold'), url(../fonts/HindVadodara-Bold.ttf)
 }
