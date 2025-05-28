@@ -1,1 +1,1 @@
-export * from './InnerComponent';
+export * from './innerComponent';

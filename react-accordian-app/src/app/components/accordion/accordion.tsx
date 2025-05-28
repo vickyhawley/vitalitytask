@@ -1,6 +1,6 @@
 'use client';
 import styles from './accordion.module.scss';
-import { InnerComponent } from './components/InnerComponent';
+import { InnerComponent } from './components/innerComponent';
 import { Stack } from '@mui/material';
 
 
