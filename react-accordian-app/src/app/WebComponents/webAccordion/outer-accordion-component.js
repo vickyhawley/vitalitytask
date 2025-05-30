@@ -18,7 +18,7 @@ class OuterAccordionComponent extends HTMLElement {
 
   }
 
-  .accordion {
+  .accordion__section {
     border-radius: 12px;
     padding: 32px !important;
     background-color: #ffffff;
