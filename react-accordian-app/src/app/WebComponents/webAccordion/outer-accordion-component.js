@@ -74,10 +74,12 @@ class OuterAccordionComponent extends HTMLElement {
     }
 }
   </style>
-        <div class="accordion__section">
+        <div class="accordion__section" role="region"
+  aria-labelledby="accordion-title">
           <div class="accordion__section--top">
-            <p class='accordion__section--title'>${item.header}</h1>
-            <p class='accordion__section--description'>${item.description}</p>
+            <p class='accordion__section--title' id="accordion-title">${item.header}</h1>
+            <p class='accordion__section--description' aria-labelledby="accordion-title"
+  aria-describedby="accordion-description">${item.description}</p>
           </div>
           ${item.body.map((entry) => `
             <inner-accordion-component
