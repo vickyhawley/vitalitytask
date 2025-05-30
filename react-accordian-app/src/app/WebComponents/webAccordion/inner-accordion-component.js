@@ -1,6 +1,3 @@
-// 'use client';
-import { HappyFace } from "@/app/icons/HappyFace/HappyFace";
-import { ChevronDown } from "@/app/icons/ChevronDown/ChevronDown";
 class InnerAccordionComponent extends HTMLElement {
     constructor() {
       super();
