@@ -101,7 +101,7 @@ class InnerAccordionComponent extends HTMLElement {
 .accordion__label {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
 }
 
@@ -134,7 +134,7 @@ class InnerAccordionComponent extends HTMLElement {
 .accordion__label {
     display: flex;
     flex-direction: column !important;
-    align-items: flex-start;
+    align-items: flex-start !important;
     gap: 0px;
 }
 }
@@ -152,6 +152,7 @@ class InnerAccordionComponent extends HTMLElement {
 .accordion__section {
     border-top: 2px solid rgba(205, 205, 205, 0.4);
     color: black;
+    align-items: center;
     padding-top: 24px;
     padding-left: 16px;
     padding-bottom: 24px;
@@ -166,7 +167,7 @@ class InnerAccordionComponent extends HTMLElement {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0px;
+    gap: 0px ;
 }
 }
   </style>

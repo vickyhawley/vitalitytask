@@ -57,7 +57,7 @@ class OuterAccordionComponent extends HTMLElement {
 @media (max-width: 375px) {
     .accordion__section {
         border-radius: 12px;
-        padding: 16px;
+        padding: 16px !important;
         background-color: #ffffff;
         box-shadow: 0, 10, 25, rgba(73, 101, 132, 0.8);
         gap: 24px;
@@ -67,7 +67,7 @@ class OuterAccordionComponent extends HTMLElement {
 @media (max-width: 320px) {
     .accordion__section {
         border-radius: 12px;
-        padding: 16px;
+        padding: 16px !important;
         background-color: #ffffff;
         box-shadow: 0, 10, 25, rgba(73, 101, 132, 0.8);
         gap: 24px;
