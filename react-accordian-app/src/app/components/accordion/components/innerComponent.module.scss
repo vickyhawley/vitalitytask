@@ -58,6 +58,7 @@
     font-size: 16px;
     font-weight: 400;
     color: #333333;
+    width: 100%;
 }
 }
 
@@ -82,6 +83,11 @@
     display: flex;
     flex-direction: column !important;
     align-items: flex-start;
+}
+
+.accordion-font {
+   
+    width: 100%;
 }
 }
 

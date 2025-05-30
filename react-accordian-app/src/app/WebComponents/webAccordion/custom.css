@@ -7,6 +7,11 @@
   padding: 16px;
 }
 
+p {
+  font-weight: 100;
+  padding: 24px;
+}
+
 .accordion-label {
   background-color: aqua;
   border-top: 1px solid #DDDDDD;
@@ -26,5 +31,3 @@
   max-height: auto;
   padding: 1em;
 }
-
-/*# sourceMappingURL=custom-accordion-component.css.map */
