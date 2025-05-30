@@ -18,7 +18,7 @@ class OuterAccordionComponent extends HTMLElement {
 
   }
 
-  .accordion-wrapper {
+  .accordion {
     border-radius: 12px;
     padding: 32px !important;
     background-color: #ffffff;
@@ -26,10 +26,10 @@ class OuterAccordionComponent extends HTMLElement {
     gap: 24px;
   }
 
-  .accordion-top {
+  .accordion__section--top {
   padding-bottom: 24px;}
 
-   .accordion-top-title {
+   .accordion__section--title {
         color: #333333;
         font-weight: 600;
         font-size: 24px;
@@ -37,7 +37,7 @@ class OuterAccordionComponent extends HTMLElement {
         letter-spacing: -1px;
   }
   
-  .accordion-top-description {
+  .accordion__section--description {
        color: #333333;
        font-weight: 400;
        font-size: 16px;
@@ -45,7 +45,7 @@ class OuterAccordionComponent extends HTMLElement {
   }
 
   @media (max-width: 768px) {
-    .accordion-wrapper {
+    .accordion__section {
         border-radius: 12px;
         padding: 32px;
         background-color: #ffffff;
@@ -55,7 +55,7 @@ class OuterAccordionComponent extends HTMLElement {
 }
 
 @media (max-width: 375px) {
-    .accordion-wrapper {
+    .accordion__section {
         border-radius: 12px;
         padding: 16px;
         background-color: #ffffff;
@@ -65,7 +65,7 @@ class OuterAccordionComponent extends HTMLElement {
 }
 
 @media (max-width: 320px) {
-    .accordion-wrapper {
+    .accordion__section {
         border-radius: 12px;
         padding: 16px;
         background-color: #ffffff;
@@ -74,10 +74,10 @@ class OuterAccordionComponent extends HTMLElement {
     }
 }
   </style>
-        <div class="accordion-wrapper">
-          <div class="accordion-top">
-            <p class='accordion-top-title'>${item.header}</h1>
-            <p class='accordion-top-description'>${item.description}</p>
+        <div class="accordion__section">
+          <div class="accordion__section--top">
+            <p class='accordion__section--title'>${item.header}</h1>
+            <p class='accordion__section--description'>${item.description}</p>
           </div>
           ${item.body.map((entry) => `
             <inner-accordion-component
@@ -87,12 +87,6 @@ class OuterAccordionComponent extends HTMLElement {
         </div>
       `;
 
-    }
-  
-    async loadCSS(path) {
-      const response = await fetch(path);
-      const css = await response.text();
-      return `<style>${css}</style>`;
     }
 
   }
