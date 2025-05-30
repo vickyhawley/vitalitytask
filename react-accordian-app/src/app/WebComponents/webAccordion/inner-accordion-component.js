@@ -7,12 +7,10 @@ class InnerAccordionComponent extends HTMLElement {
     async connectedCallback() {  
       const label = this.getAttribute('label');
       const description = this.getAttribute('description');
-      console.log('description', description)
-      // const icon = this.getAttribute('icon');
+      this.render(label, description);
+    }
 
-    this.render(label, description);}
-
-     render(label, description){this.shadowRoot.innerHTML = `
+  render(label, description){this.shadowRoot.innerHTML = `
   <style>
   :host {
     display: block;
@@ -56,6 +54,21 @@ class InnerAccordionComponent extends HTMLElement {
     &.open {
       display: flex;
      
+    }
+}
+
+.chevron-up {
+    display: none;
+
+    &.open {
+    display: flex;
+    }
+}
+.chevron-down {
+    display: flex;
+
+    &.open {
+    display: none !important;
     }
 }
 
@@ -161,12 +174,16 @@ class InnerAccordionComponent extends HTMLElement {
 </svg></span>
           <p class='accordion-label-font'>${label}</p>
           </div>
-          <span>
+          <span class='chevron-down'>
           <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="10" cy="10" r="10" fill="#F3F6F9"/>
           <path d="M6.5 8L10 11.8416L13.5 8" stroke="#EA194D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           </span>
+          <span class='chevron-up'><svg width="40" height="40" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11.0001" r="10" transform="rotate(-179.562 11 11.0001)" fill="#F3F6F9"/>
+<path d="M14.5 13.0001L11 9.15853L7.5 13.0001" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
         </div>
       </div>
         <div class="accordion-content">
@@ -180,15 +197,13 @@ class InnerAccordionComponent extends HTMLElement {
       
     }
   
-    async loadCSS(path) {
-      const response = await fetch(path);
-      const css = await response.text();
-      return `<style>${css}</style>`;
-    }
-  
     toggle() {
       const content = this.shadowRoot.querySelector('.accordion-content');
       content.classList.toggle('open');
+      const chevronUp = this.shadowRoot.querySelector('.chevron-up');
+      chevronUp.classList.toggle('open');
+      const chevronDown = this.shadowRoot.querySelector('.chevron-down');
+      chevronDown.classList.toggle('open');
     }
   }
   
