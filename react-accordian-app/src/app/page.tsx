@@ -35,14 +35,14 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+      <main className={styles.main} aria-label="Accordion demo section">
       <h1 style={{color: '#000000'}}>Testing React component</h1>
       
-        {data.map((item) => <Accordion data={item} />)}
+        {data.map((item, index) => <Accordion key={index} data={item} />)}
       
-      <h1 style={{color: '#000000'}}>Testing web component</h1>
+      <h2 style={{color: '#000000'}}>Testing web component</h2>
       <div>
-      {data.map((item, index) =>  <div key={index} ><outer-accordion-component data-item={JSON.stringify(item)}/></div>)}
+      {data.map((item, index) =>  <div key={index} aria-label={`Accordion section ${index + 1}`} ><outer-accordion-component data-item={JSON.stringify(item)}/></div>)}
       </div>
       </main>
       
