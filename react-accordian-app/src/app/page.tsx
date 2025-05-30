@@ -18,9 +18,9 @@ export default function Home() {
 
   React.useEffect(() => {
     // @ts-ignore – these are side-effect-only web component definitions
-    import('./src/app/webComponents/webAccordion/inner-accordion-component');
+    import('./webComponents/webAccordion/inner-accordion-component');
     // @ts-ignore
-    import('./src/app/webComponents/webAccordion/outer-accordion-component')}, [])
+    import('./webComponents/webAccordion/outer-accordion-component')}, [])
 
 
   return (
