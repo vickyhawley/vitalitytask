@@ -22,11 +22,11 @@ export function InnerComponent({label, description}:iInnerComponent){
     }
 
     return(
-        <Stack className={styles['accordion-wrapper']}>
-            <Stack className={styles['accordion-close']}>
+        <Stack className={styles['accordion__wrapper']}>
+            <Stack className={styles['accordion--close']}>
                 <div onClick={() => handleOpen()}>
                     <Stack direction={'row'} gap={4} alignItems={'center'} justifyContent={'space-between'}>
-                        <Stack className={styles['accordion-close-label']} gap={2} >
+                        <Stack className={styles['accordion__close--label']} gap={2} >
                             <HappyFace fill={'#e71757'}/>
                             <h2 style={{color: open ? '#e71757' : '#000000', fontWeight: 500, fontSize: 18, lineHeight: 1.6, letterSpacing: 0}}>{label}</h2>
                         </Stack>
@@ -34,8 +34,8 @@ export function InnerComponent({label, description}:iInnerComponent){
                     </Stack>
                 </div>
             </Stack>
-            {open && <Stack className={styles['accordion-open']}>
-                <p className={styles['accordion-font']}>{description}</p></Stack>}
+            {open && <Stack className={styles['accordion--open']}>
+                <p className={styles['accordion__font']}>{description}</p></Stack>}
         </Stack>
     )
 }

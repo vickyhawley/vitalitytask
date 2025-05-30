@@ -1,42 +1,30 @@
 
 
-.accordion-wrapper {
+.accordion {
     border-radius: 12px;
     padding: 32px;
     background-color: #ffffff;
-    box-shadow: 0, 10, 25, rgba(73, 101, 132, 0.08);
+    box-shadow: 0, 10, 25, rgba(73, 101, 132, 0.8);
     gap: 24px;
 }
 
-.accordion-top {
+.accordion__top {
     padding-bottom: 24px;
 }
 @media (max-width: 768px) {
-    .accordion-wrapper {
-        border-radius: 12px;
+    .accordion {
         padding: 32px;
-        background-color: #ffffff;
-        box-shadow: 0, 10, 25, rgba(73, 101, 132, 0.8);
-        gap: 24px;
     }
 }
 
 @media (max-width: 375px) {
-    .accordion-wrapper {
-        border-radius: 12px;
+    .accordion {
         padding: 16px;
-        background-color: #ffffff;
-        box-shadow: 0, 10, 25, rgba(73, 101, 132, 0.8);
-        gap: 24px;
     }
 }
 
 @media (max-width: 320px) {
-    .accordion-wrapper {
-        border-radius: 12px;
+    .accordion {
         padding: 16px;
-        background-color: #ffffff;
-        box-shadow: 0, 10, 25, rgba(73, 101, 132, 0.8);
-        gap: 24px;
     }
 }
