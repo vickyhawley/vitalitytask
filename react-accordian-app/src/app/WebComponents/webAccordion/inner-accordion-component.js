@@ -1,3 +1,4 @@
+'use client';
 class InnerAccordionComponent extends HTMLElement {
     constructor() {
       super();

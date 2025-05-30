@@ -2,17 +2,7 @@
 import * as React from 'react'
 import styles from "./page.module.css";
 import { Accordion } from "./components/accordion/accordion";
-import './webComponents/webAccordion/inner-accordion-component';
-import './webComponents/webAccordion/outer-accordion-component';
-import { useEffect } from "react";
 
-declare global{
-    namespace JSX {
-  interface IntrinsicElements {
-      'outer-accordion-component': React.HTMLAttributes<HTMLElement>;
-  }
-}
-}
 
 export default function Home() {
 
@@ -26,11 +16,11 @@ export default function Home() {
       {label: 'Label', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet quis quam sed suscipit. Proin viverra mollis dolor id euismod. Duis nisi augue, ultrices ut accumsan id, tristique ac diam. Ut efficitur, orci a mattis viverra, nisi sapien porttitor augue, non porta tortor turpis quis dolor. Aenean laoreet ante metus, a euismod orci varius sed. Vestibulum vel.'}]}
   ]
 
-  useEffect(() => {
-      import('./webComponents/webAccordion/outer-accordion-component.js');
-      import('./webComponents/webAccordion/inner-accordion-component.js');
-  }, [])
- 
+  React.useEffect(() => {
+    // @ts-ignore – these are side-effect-only web component definitions
+    import('./webComponents/webAccordion/inner-accordion-component');
+    // @ts-ignore
+    import('./webComponents/webAccordion/outer-accordion-component')}, [])
 
 
   return (
