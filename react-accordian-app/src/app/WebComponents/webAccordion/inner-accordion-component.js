@@ -233,6 +233,9 @@ class InnerAccordionComponent extends HTMLElement {
     }
   }
   
-  customElements.define('inner-accordion-component', InnerAccordionComponent);
+  if (!customElements.get('inner-accordion-component')) {
+    customElements.define('inner-accordion-component', InnerAccordionComponent);
+  }
+  
   
   

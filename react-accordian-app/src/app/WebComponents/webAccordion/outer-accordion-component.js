@@ -94,6 +94,9 @@ class OuterAccordionComponent extends HTMLElement {
 
   }
   
-  customElements.define('outer-accordion-component', OuterAccordionComponent);
+  if (!customElements.get('outer-accordion-component')) {
+    customElements.define('outer-accordion-component', OuterAccordionComponent);
+  }
+  
   
   
